@@ -5,11 +5,23 @@ word_list = [ "What", "about", "the", "Spam", "sausage", "spam", "spam", "bacon"
 
 # Write a function that takes a list of numbers and returns a new list with only the odd numbers.
 def all_odd(number_list):
-    return []
+    new_list = []
+    for i in range(len(number_list)):
+        if number_list[i] % 2 != 0:
+            new_list.append(number_list[i])
+        else:
+            continue
+    print new_list
 
 # Write a function that takes a list of numbers and returns a new list with only the even numbers.
 def all_even(number_list):
-    return []
+    new_list = []
+    for i in range(len(number_list)):
+        if number_list[i] % 2 == 0:
+            new_list.append(number_list[i])
+        else:
+            continue
+    print new_list   
 
 # Write a function that takes a list of strings and a new list with all strings of length 4 or greater.
 def long_words(word_list):
@@ -46,3 +58,6 @@ def join_strings(word_list):
 # Write a function that takes a list of integers and returns the average (without using the avg method)
 def average(number_list):
     return 0
+
+# all_odd(number_list)
+all_even(number_list)
