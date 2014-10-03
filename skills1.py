@@ -53,8 +53,7 @@ def largest(number_list):
 def halvesies(number_list):
     half_list = []
     for i in range(len(number_list)):
-        number_list[i] = float(number_list[i]) / 2
-        half_list.append(number_list[i])
+        half_list.append(float(number_list[i]) / 2)
     return half_list
 
 # Write a function that takes a list of words and returns a list of all the lengths of those words.
@@ -68,6 +67,7 @@ def word_lengths(word_list):
 # Write a function (using iteration) that sums all the numbers in a list.
 def sum_numbers(number_list):
     sum_of_list = 0
+    print number_list
     for i in range(len(number_list)):
         sum_of_list += number_list[i]
     return sum_of_list
@@ -81,16 +81,17 @@ def mult_numbers(number_list):
 
 # Write a function that joins all the strings in a list together (without using the join method) and returns a single string.
 def join_strings(word_list):
-    join_strings = ''
+    joined_string = ''
     for i in range(len(word_list)):
-        join_strings = join_strings + word_list[i]
-    return join_strings
+        joined_string = joined_string + " " + word_list[i]
+    return joined_string
 
 # Write a function that takes a list of integers and returns the average (without using the avg method)
 def average(number_list):
     total_of_numbers = 0
     for i in range(len(number_list)):
         total_of_numbers += float(number_list[i])
+    # print total_of_numbers
     average_of_list = total_of_numbers / len(number_list)
     return average_of_list
 
