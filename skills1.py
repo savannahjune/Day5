@@ -35,27 +35,49 @@ def long_words(word_list):
 
 # Write a function that finds the smallest element in a list of integers and returns it.
 def smallest(number_list):
-    return None
+    smallest = number_list[0]
+    for i in range(len(number_list)):
+        if number_list[i] < smallest:
+            smallest = number_list[i]
+    return smallest
 
 # Write a function that finds the largest element in a list of integers and returns it.
 def largest(number_list):
-    return None
+    largest = number_list[0]
+    for i in range(len(number_list)):
+        if number_list[i] > largest:
+            largest = number_list[i]
+    return largest
 
 # Write a function that takes a list of numbers and returns a new list of all those numbers divided by two.
 def halvesies(number_list):
-    return []
+    half_list = []
+    for i in range(len(number_list)):
+        number_list[i] = float(number_list[i]) / 2
+        half_list.append(number_list[i])
+    return half_list
 
 # Write a function that takes a list of words and returns a list of all the lengths of those words.
 def word_lengths(word_list):
-    return []
+    list_lengths = []
+    for i in range(len(word_list)):
+        length = len(word_list[i])
+        list_lengths.append(length)
+    return list_lengths
 
 # Write a function (using iteration) that sums all the numbers in a list.
 def sum_numbers(number_list):
-    return 0
+    sum_of_list = 0
+    for i in range(len(number_list)):
+        sum_of_list += number_list[i]
+    return sum_of_list
 
 # Write a function that multiplies all the numbers in a list together.
 def mult_numbers(number_list):
-    return 0
+    mult_of_list = 1
+    for i in range(len(number_list)):
+        mult_of_list = mult_of_list * number_list[i]
+    return mult_of_list
 
 # Write a function that joins all the strings in a list together (without using the join method) and returns a single string.
 def join_strings(word_list):
@@ -67,4 +89,10 @@ def average(number_list):
 
 # all_odd(number_list)
 # all_even(number_list)
-long_words(word_list)
+# long_words(word_list)
+# print smallest(number_list)
+# print largest(number_list)
+# print halvesies(number_list)
+# print word_lengths(word_list)
+# print sum_numbers(number_list)
+# print mult_numbers(number_list)
