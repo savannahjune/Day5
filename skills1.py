@@ -79,24 +79,39 @@ def smallest(number_list):
             number = smallest
     return smallest
 
-def new_smallest(number_list): 
-    smallest = [number for number in number_list if number < smallest]
-    return smallest   
+# def new_smallest(number_list): 
+#     smallest = [number for number in number_list if number < smallest]
+#     return smallest   
 
 # Write a function that finds the largest element in a list of integers and returns it.
 def largest(number_list):
+    # largest = number_list[0]
+    # for i in range(len(number_list)):
+    #     if number_list[i] > largest:
+    #         largest = number_list[i]
+    # return largest
     largest = number_list[0]
-    for i in range(len(number_list)):
-        if number_list[i] > largest:
-            largest = number_list[i]
+    for number in number_list:
+        if number > largest:
+            largest = number
     return largest
+
 
 # Write a function that takes a list of numbers and returns a new list of all those numbers divided by two.
 def halvesies(number_list):
+    # half_list = []
+    # for i in range(len(number_list)):
+    #     half_list.append(float(number_list[i]) / 2)
+    # return half_list
     half_list = []
-    for i in range(len(number_list)):
-        half_list.append(float(number_list[i]) / 2)
+    for number in number_list:
+        half_list.append((number)/2.0)
     return half_list
+
+def new_halvsies(number_list):
+    half_list = [(number / 2.0) for number in number_list ]
+    return half_list   
+
 
 # Write a function that takes a list of words and returns a list of all the lengths of those words.
 def word_lengths(word_list):
@@ -144,10 +159,11 @@ def average(number_list):
 # print new_all_even(number_list)
 # print long_words(word_list)
 # print new_long_words(word_list)
-print smallest(number_list)
-print new_smallest(number_list)
+# print smallest(number_list)
+# print new_smallest(number_list)
 # print largest(number_list)
 # print halvesies(number_list)
+print new_halvsies(number_list)
 # print word_lengths(word_list)
 # print sum_numbers(number_list)
 # print mult_numbers(number_list)
