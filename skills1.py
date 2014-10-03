@@ -6,40 +6,82 @@ word_list = [ "What", "about", "the", "Spam", "sausage", "spam", "spam", "bacon"
 # Write a function that takes a list of numbers and returns a new list with only the odd numbers.
 def all_odd(number_list):
     new_list = []
-    for i in range(len(number_list)):
-        if number_list[i] % 2 != 0:
-            new_list.append(number_list[i])
-        else:
-            continue
+    # for i in range(len(number_list)):
+    #     if number_list[i] % 2 != 0:
+    #         new_list.append(number_list[i])
+    #     else:
+    #         continue
+    # return new_list
+
+    for number in number_list:
+        if number % 2 != 0:
+            new_list.append(number)
     return new_list
+
+def new_all_odd(number_list):
+    new_list = [number for number in number_list if number % 2 == 1]
+    return new_list 
+
+def new_index_all_odd(number_list):
+    new_list = [number_list[i] for i in range(len(number_list)) if number_list[i] % 2 == 1]
+    return new_list       
 
 # Write a function that takes a list of numbers and returns a new list with only the even numbers.
 def all_even(number_list):
+    # new_list = []
+    # for i in range(len(number_list)):
+    #     if number_list[i] % 2 == 0:
+    #         new_list.append(number_list[i])
+    #     else:
+    #         continue
+    # return new_list 
+
     new_list = []
-    for i in range(len(number_list)):
-        if number_list[i] % 2 == 0:
-            new_list.append(number_list[i])
-        else:
-            continue
-    return new_list   
+
+    for number in number_list:
+        if number % 2 == 0:
+            new_list.append(number)
+    return new_list
+
+def new_all_even(number_list):
+    new_list = [number for number in number_list if number % 2 == 0]
+    return new_list  
 
 # Write a function that takes a list of strings and returns a new list with all strings of length 4 or greater.
 def long_words(word_list):
+    # new_four_greater = []
+    # for i in range(len(word_list)):
+    #     if len(word_list[i]) >= 4:
+    #         new_four_greater.append(word_list[i])
+    #     else:
+    #         continue
+    # return new_four_greater
     new_four_greater = []
-    for i in range(len(word_list)):
-        if len(word_list[i]) >= 4:
-            new_four_greater.append(word_list[i])
-        else:
-            continue
+    for word in word_list:
+        if len(word) >= 4:
+            new_four_greater.append(word)
+    return new_four_greater
+
+def new_long_words(word_list):
+    new_four_greater = [word for word in word_list if len(word) >= 4]
     return new_four_greater
 
 # Write a function that finds the smallest element in a list of integers and returns it.
 def smallest(number_list):
+    # smallest = number_list[0]
+    # for i in range(len(number_list)):
+    #     if number_list[i] < smallest:
+    #         smallest = number_list[i]
+    # return smallest
     smallest = number_list[0]
-    for i in range(len(number_list)):
-        if number_list[i] < smallest:
-            smallest = number_list[i]
+    for number in number_list:
+        if number < smallest:
+            number = smallest
     return smallest
+
+def new_smallest(number_list): 
+    smallest = [number for number in number_list if number < smallest]
+    return smallest   
 
 # Write a function that finds the largest element in a list of integers and returns it.
 def largest(number_list):
@@ -95,14 +137,19 @@ def average(number_list):
     average_of_list = total_of_numbers / len(number_list)
     return average_of_list
 
-print all_odd(number_list)
-print all_even(number_list)
-print long_words(word_list)
+# print all_odd(number_list)
+# print new_all_odd(number_list)
+# print new_index_all_odd(number_list)
+# print all_even(number_list)
+# print new_all_even(number_list)
+# print long_words(word_list)
+# print new_long_words(word_list)
 print smallest(number_list)
-print largest(number_list)
-print halvesies(number_list)
-print word_lengths(word_list)
-print sum_numbers(number_list)
-print mult_numbers(number_list)
-print join_strings(word_list)
-print average(number_list)
+print new_smallest(number_list)
+# print largest(number_list)
+# print halvesies(number_list)
+# print word_lengths(word_list)
+# print sum_numbers(number_list)
+# print mult_numbers(number_list)
+# print join_strings(word_list)
+# print average(number_list)
