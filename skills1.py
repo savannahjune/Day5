@@ -11,7 +11,7 @@ def all_odd(number_list):
             new_list.append(number_list[i])
         else:
             continue
-    print new_list
+    return new_list
 
 # Write a function that takes a list of numbers and returns a new list with only the even numbers.
 def all_even(number_list):
@@ -21,7 +21,7 @@ def all_even(number_list):
             new_list.append(number_list[i])
         else:
             continue
-    print new_list   
+    return new_list   
 
 # Write a function that takes a list of strings and returns a new list with all strings of length 4 or greater.
 def long_words(word_list):
@@ -31,7 +31,7 @@ def long_words(word_list):
             new_four_greater.append(word_list[i])
         else:
             continue
-    print new_four_greater
+    return new_four_greater
 
 # Write a function that finds the smallest element in a list of integers and returns it.
 def smallest(number_list):
@@ -94,9 +94,9 @@ def average(number_list):
     average_of_list = total_of_numbers / len(number_list)
     return average_of_list
 
-all_odd(number_list)
-all_even(number_list)
-long_words(word_list)
+print all_odd(number_list)
+print all_even(number_list)
+print long_words(word_list)
 print smallest(number_list)
 print largest(number_list)
 print halvesies(number_list)
