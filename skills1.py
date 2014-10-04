@@ -127,33 +127,55 @@ def word_lengths(word_list):
     return list_lengths
 
 # Write a function (using iteration) that sums all the numbers in a list.
+# it's a reduce so not list comprehension
 def sum_numbers(number_list):
+    # sum_of_list = 0
+    # print number_list
+    # for i in range(len(number_list)):
+    #     sum_of_list += number_list[i]
+    # return sum_of_list
     sum_of_list = 0
-    print number_list
-    for i in range(len(number_list)):
-        sum_of_list += number_list[i]
+    for number in number_list:
+        sum_of_list += number
     return sum_of_list
 
 # Write a function that multiplies all the numbers in a list together.
+# it's a reduce so not list comprehension
 def mult_numbers(number_list):
+    # mult_of_list = 1
+    # for i in range(len(number_list)):
+    #     mult_of_list = mult_of_list * number_list[i]
+    # return mult_of_list
     mult_of_list = 1
-    for i in range(len(number_list)):
-        mult_of_list = mult_of_list * number_list[i]
+    for number in number_list:
+        mult_of_list = mult_of_list * number
     return mult_of_list
 
+
 # Write a function that joins all the strings in a list together (without using the join method) and returns a single string.
+# not list comprehension because not making a list
 def join_strings(word_list):
+    # joined_string = ''
+    # for i in range(len(word_list)):
+    #     joined_string = joined_string + " " + word_list[i]
+    # return joined_string
     joined_string = ''
-    for i in range(len(word_list)):
-        joined_string = joined_string + " " + word_list[i]
+    for word in word_list:
+        joined_string = joined_string + " " + word
     return joined_string
 
 # Write a function that takes a list of integers and returns the average (without using the avg method)
+# it's a reduce so it doesn't use list comprehension
 def average(number_list):
+    # total_of_numbers = 0
+    # for i in range(len(number_list)):
+    #     total_of_numbers += float(number_list[i])
+    # # print total_of_numbers
+    # average_of_list = total_of_numbers / len(number_list)
+    # return average_of_list
     total_of_numbers = 0
-    for i in range(len(number_list)):
-        total_of_numbers += float(number_list[i])
-    # print total_of_numbers
+    for number in number_list:
+        total_of_numbers += float(number)
     average_of_list = total_of_numbers / len(number_list)
     return average_of_list
 
@@ -169,8 +191,8 @@ def average(number_list):
 # print largest(number_list)
 # print halvesies(number_list)
 # print new_halvsies(number_list)
-print word_lengths(word_list)
+# print word_lengths(word_list)
 # print sum_numbers(number_list)
 # print mult_numbers(number_list)
 # print join_strings(word_list)
-# print average(number_list)
+print average(number_list)
