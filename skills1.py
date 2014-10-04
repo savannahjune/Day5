@@ -47,6 +47,10 @@ def new_all_even(number_list):
     new_list = [number for number in number_list if number % 2 == 0]
     return new_list  
 
+def filter_all_even(number_list):
+    new_list = filter(lambda number: number % 2 == 0, number_list)
+    return new_list
+
 # Write a function that takes a list of strings and returns a new list with all strings of length 4 or greater.
 def long_words(word_list):
     # new_four_greater = []
@@ -184,6 +188,7 @@ def average(number_list):
 # print new_index_all_odd(number_list)
 # print all_even(number_list)
 # print new_all_even(number_list)
+print filter_all_even(number_list)
 # print long_words(word_list)
 # print new_long_words(word_list)
 # print smallest(number_list)
@@ -195,4 +200,4 @@ def average(number_list):
 # print sum_numbers(number_list)
 # print mult_numbers(number_list)
 # print join_strings(word_list)
-print average(number_list)
+# print average(number_list)
