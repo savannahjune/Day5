@@ -114,11 +114,16 @@ def new_halvsies(number_list):
 
 
 # Write a function that takes a list of words and returns a list of all the lengths of those words.
+# this function requires map function for new word lengths
 def word_lengths(word_list):
+    # list_lengths = []
+    # for i in range(len(word_list)):
+    #     length = len(word_list[i])
+    #     list_lengths.append(length)
+    # return list_lengths
     list_lengths = []
-    for i in range(len(word_list)):
-        length = len(word_list[i])
-        list_lengths.append(length)
+    for word in word_list:
+        list_lengths.append(len(word))
     return list_lengths
 
 # Write a function (using iteration) that sums all the numbers in a list.
@@ -163,8 +168,8 @@ def average(number_list):
 # print new_smallest(number_list)
 # print largest(number_list)
 # print halvesies(number_list)
-print new_halvsies(number_list)
-# print word_lengths(word_list)
+# print new_halvsies(number_list)
+print word_lengths(word_list)
 # print sum_numbers(number_list)
 # print mult_numbers(number_list)
 # print join_strings(word_list)
